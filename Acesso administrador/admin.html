@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relatorio - Segmento Pais</title>
+  <link rel="stylesheet" href="style-admin.css?v=2" />
+  <link rel="icon" type="image/png" href="LOGO CETI.jpg" />
+</head>
+<body>
+
+  <div id="admin-login-screen" class="active">
+    <div class="login-box">
+      <img src="LOGO CETI.jpg" alt="Logo CETI" class="logo-admin" />
+      <h2>Acesso ao Relatorio</h2>
+      <p class="login-subtitle">Segmento Pais</p>
+
+      <div id="login-error-admin" class="admin-error" role="alert"></div>
+
+      <input type="email" id="input-email-admin" placeholder="E-mail de administrador" autocomplete="username" />
+      <input type="password" id="input-senha-admin" placeholder="Senha de acesso" autocomplete="current-password" />
+
+      <button id="btn-entrar-admin" type="button">Entrar</button>
+      <a href="../index.html" class="btn-voltar">Voltar para a Urna</a>
+    </div>
+  </div>
+
+  <div id="admin-dashboard-screen">
+    <header class="admin-header">
+      <div class="header-left">
+        <img src="LOGO CETI.jpg" alt="Logo CETI" class="logo-pequena" />
+        <div>
+          <h1>Relatorio - Segmento Pais</h1>
+          <p>Apuracao pela API Cloudflare</p>
+        </div>
+      </div>
+      <button id="btn-sair-admin" type="button">Encerrar sessao</button>
+    </header>
+
+    <main class="dashboard-container">
+      <section class="controls-card">
+        <div>
+          <h2>Relatorio de votos</h2>
+          <p>Use os botoes para atualizar a leitura da API Cloudflare ou imprimir o resultado.</p>
+        </div>
+
+        <div class="controls-actions">
+          <button id="btn-atualizar-relatorio" type="button">Atualizar relatorio</button>
+          <button id="btn-imprimir-relatorio" type="button">Imprimir relatorio</button>
+        </div>
+      </section>
+
+      <section class="summary-card">
+        <span>Total geral de votos</span>
+        <strong id="total-votos-texto">0</strong>
+      </section>
+
+      <section class="report-card">
+        <div class="report-title">
+          <h2>Resultado dos candidatos</h2>
+          <p id="relatorio-status">Aguardando leitura dos votos.</p>
+        </div>
+
+        <div class="table-wrap">
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Candidato</th>
+                <th>Quantidade de votos</th>
+                <th>Porcentagem</th>
+              </tr>
+            </thead>
+            <tbody id="tabela-relatorio-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="../api-config.js?v=2"></script>
+  <script src="admin.js?v=5"></script>
+</body>
+</html>

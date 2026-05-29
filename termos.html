@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos e Privacidade - Urna Escolar Pais</title>
+  <link rel="icon" type="image/png" href="images/622610208_17849005614668770_8513646390767867641_n.jpg" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", system-ui, sans-serif; }
+    :root {
+      --bg: #f8fafc; --surface: #fff; --border: #e2e8f0; --green: #00a859;
+      --green-dark: #008746; --blue: #00aeef; --yellow: #f7941d;
+      --text: #0f172a; --muted: #475569; --radius: 14px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    body { min-height: 100vh; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .top-header {
+      position: sticky; top: 0; z-index: 10; width: 100%; padding: 16px 32px;
+      background: var(--surface); display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-area img { height: 52px; width: auto; }
+    .logo-area h1 { font-size: 1rem; color: var(--green-dark); }
+    .logo-area p { color: var(--muted); font-size: 0.8rem; }
+    .btn-voltar {
+      text-decoration: none; color: #fff; padding: 10px 22px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--green)); font-weight: 800;
+      box-shadow: 0 4px 15px rgba(0, 168, 89, 0.25);
+    }
+    .container { max-width: 950px; margin: 40px auto; padding: 0 20px 50px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .hero { color: #fff; padding: 38px 34px; background: linear-gradient(135deg, var(--blue), var(--green)); }
+    .hero span { display: inline-block; background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 0.78rem; margin-bottom: 14px; }
+    .hero h2 { font-size: 2rem; line-height: 1.15; }
+    .hero p { margin-top: 10px; max-width: 720px; opacity: 0.95; }
+    .content { padding: 30px 34px 38px; }
+    .notice, .highlight-box, .privacy-box, .warning-box {
+      padding: 16px 18px; border-radius: 10px; margin: 18px 0; font-weight: 600;
+    }
+    .notice { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; }
+    .highlight-box { background: rgba(0,168,89,0.1); border: 1px solid rgba(0,168,89,0.25); color: var(--green-dark); }
+    .privacy-box { background: #fff7ed; border: 1px solid #fed7aa; color: #9a3412; }
+    .warning-box { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+    section { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    section:last-child { border-bottom: 0; }
+    h3 { color: var(--green-dark); margin-bottom: 8px; }
+    ul { margin: 10px 0 0 20px; }
+    li { margin: 6px 0; }
+    .footer { text-align: center; color: var(--muted); margin-top: 22px; font-size: 0.9rem; }
+    @media (max-width: 720px) {
+      .top-header { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+      .btn-voltar { width: 100%; text-align: center; }
+      .hero, .content { padding: 26px 22px; }
+      .hero h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-area">
+      <img src="images/622610208_17849005614668770_8513646390767867641_n.jpg" alt="Logo CETI Amargosa" />
+      <div>
+        <h1>Urna Eletronica Escolar</h1>
+        <p>Segmento Pais</p>
+      </div>
+    </div>
+    <a href="index.html" class="btn-voltar">Voltar para a Urna</a>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="hero">
+        <span>Termos e privacidade</span>
+        <h2>Urna Escolar - Segmento Pais</h2>
+        <p>Documento de consulta sobre o uso da urna, os cuidados com os dados e a apuracao da votacao pelo backend Cloudflare.</p>
+      </div>
+
+      <div class="content">
+        <div class="notice">
+          Esta versao e destinada ao segmento PAIS. Nao ha coleta de matricula, nome de estudante ou identificacao do responsavel na tela de votacao.
+        </div>
+
+        <section>
+          <h3>1. Finalidade do sistema</h3>
+          <p>
+            A Urna Eletronica Escolar permite votacoes internas organizadas pela escola para o segmento Pais,
+            usando uma interface simples: o eleitor escolhe o candidato pela foto, confirma e o voto e registrado.
+          </p>
+        </section>
+
+        <section>
+          <h3>2. Funcionamento da votacao</h3>
+          <ul>
+            <li>O eleitor visualiza os candidatos em cards com foto e nome.</li>
+            <li>O eleitor clica na foto do candidato escolhido.</li>
+            <li>O sistema exibe uma confirmacao do voto.</li>
+            <li>Depois da confirmacao, o voto e enviado para a API Cloudflare.</li>
+            <li>A tela final aparece e a urna reinicia automaticamente para o proximo eleitor.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>3. Dados registrados</h3>
+          <p>O sistema registra somente os dados necessarios para apuracao:</p>
+          <ul>
+            <li>ID do candidato;</li>
+            <li>Nome do candidato;</li>
+            <li>Segmento: pais;</li>
+            <li>Data e horario do registro no banco Cloudflare D1.</li>
+          </ul>
+          <div class="privacy-box">
+            O sistema nao solicita nome do eleitor, documento pessoal, matricula, turma, senha pessoal, localizacao, camera ou microfone.
+          </div>
+        </section>
+
+        <section>
+          <h3>4. Armazenamento</h3>
+          <p>
+            Os dados da votacao sao enviados para uma API em Cloudflare Workers ou Pages Functions
+            e armazenados em banco Cloudflare D1, em tabelas separadas para o segmento Pais.
+          </p>
+        </section>
+
+        <section>
+          <h3>5. Area administrativa</h3>
+          <p>
+            A area administrativa e restrita a pessoas autorizadas pela escola. Ela permite consultar o total
+            de votos por candidato, porcentagens e total geral da votacao.
+          </p>
+          <div class="warning-box">
+            O acesso administrativo nao deve ser compartilhado com pessoas nao autorizadas.
+          </div>
+        </section>
+
+        <section>
+          <h3>6. Responsabilidades</h3>
+          <ul>
+            <li>Usar a urna apenas para a votacao escolar autorizada.</li>
+            <li>Nao tentar manipular votos ou acessar a area administrativa indevidamente.</li>
+            <li>Manter a apuracao restrita aos responsaveis autorizados pela escola.</li>
+            <li>Usar o relatorio apenas para fins escolares e organizacionais.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>7. Atualizacoes</h3>
+          <p>
+            Estes termos podem ser atualizados conforme a escola ajuste o processo de votacao,
+            o backend Cloudflare, os criterios de seguranca ou a forma de divulgacao dos resultados.
+          </p>
+        </section>
+
+        <div class="highlight-box">
+          Resumo: esta urna e do segmento Pais, usa Cloudflare como backend e registra apenas o voto no candidato escolhido.
+        </div>
+      </div>
+    </div>
+
+    <p class="footer">Urna Eletronica Escolar - Termos e Privacidade - Segmento Pais</p>
+  </main>
+</body>
+</html>

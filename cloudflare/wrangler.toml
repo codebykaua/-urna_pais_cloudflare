@@ -1,0 +1,12 @@
+name = "urna-pais-api"
+main = "worker.js"
+compatibility_date = "2026-05-29"
+
+[vars]
+ADMIN_EMAIL = "secretaria.ceti@amargosa.ba"
+ALLOWED_ORIGINS = "*"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "urna-pais-d1"
+database_id = "COLE_AQUI_O_DATABASE_ID_DO_D1"

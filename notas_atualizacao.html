@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notas de Atualizacao - Urna Escolar Pais</title>
+  <link rel="icon" type="image/png" href="images/622610208_17849005614668770_8513646390767867641_n.jpg" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Segoe UI", system-ui, sans-serif; }
+    :root {
+      --bg: #f8fafc; --surface: #fff; --border: #e2e8f0; --green: #00a859;
+      --green-dark: #008746; --blue: #00aeef; --yellow: #f7941d;
+      --text: #0f172a; --muted: #475569; --radius: 14px;
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+    body { min-height: 100vh; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .top-header {
+      position: sticky; top: 0; z-index: 10; width: 100%; padding: 16px 32px;
+      background: var(--surface); display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    }
+    .logo-area { display: flex; align-items: center; gap: 12px; }
+    .logo-area img { height: 52px; width: auto; }
+    .logo-area h1 { font-size: 1rem; color: var(--green-dark); }
+    .logo-area p { color: var(--muted); font-size: 0.8rem; }
+    .header-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-link {
+      text-decoration: none; color: #fff; padding: 10px 20px; border-radius: 999px;
+      background: linear-gradient(135deg, var(--blue), var(--green)); font-weight: 800;
+      box-shadow: 0 4px 15px rgba(0, 168, 89, 0.25);
+    }
+    .container { max-width: 980px; margin: 40px auto; padding: 0 20px 50px; }
+    .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .hero { color: #fff; padding: 38px 34px; background: linear-gradient(135deg, var(--blue), var(--green)); }
+    .hero span { display: inline-block; background: rgba(255,255,255,0.18); padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 0.78rem; margin-bottom: 14px; }
+    .hero h2 { font-size: 2rem; line-height: 1.15; }
+    .hero p { margin-top: 10px; max-width: 720px; opacity: 0.95; }
+    .content { padding: 30px 34px 38px; }
+    .version-card { border: 1px solid var(--border); border-radius: 12px; padding: 22px; margin-bottom: 18px; background: #fff; }
+    .version-header { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+    .version-header h3 { color: var(--green-dark); }
+    .version-header p { color: var(--muted); font-size: 0.9rem; }
+    .tag { background: #e0f2fe; color: #075985; padding: 5px 12px; border-radius: 999px; font-weight: 800; font-size: 0.75rem; white-space: nowrap; }
+    h4 { margin: 16px 0 6px; color: var(--green-dark); }
+    ul { margin-left: 20px; }
+    li { margin: 6px 0; }
+    .highlight-box {
+      margin-top: 18px; padding: 16px 18px; border-radius: 10px;
+      background: rgba(0,168,89,0.1); border: 1px solid rgba(0,168,89,0.25);
+      color: var(--green-dark); font-weight: 700;
+    }
+    .footer { text-align: center; color: var(--muted); margin-top: 22px; font-size: 0.9rem; }
+    @media (max-width: 720px) {
+      .top-header { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 12px; }
+      .header-actions, .btn-link { width: 100%; text-align: center; }
+      .hero, .content { padding: 26px 22px; }
+      .hero h2 { font-size: 1.5rem; }
+      .version-header { display: block; }
+      .tag { display: inline-block; margin-top: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-header">
+    <div class="logo-area">
+      <img src="images/622610208_17849005614668770_8513646390767867641_n.jpg" alt="Logo CETI Amargosa" />
+      <div>
+        <h1>Urna Eletronica Escolar</h1>
+        <p>Segmento Pais</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a href="index.html" class="btn-link">Voltar para a Urna</a>
+      <a href="termos.html" class="btn-link">Termos</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <div class="hero">
+        <span>Notas de atualizacao</span>
+        <h2>Urna Escolar - Segmento Pais</h2>
+        <p>Registro das principais mudancas desta versao, agora separada para Pais e preparada para Cloudflare.</p>
+      </div>
+
+      <div class="content">
+        <article class="version-card">
+          <div class="version-header">
+            <div>
+              <h3>Versao 2.0.0 - Segmento Pais</h3>
+              <p>Atualizada em 29/05/2026</p>
+            </div>
+            <span class="tag">Pais + Cloudflare</span>
+          </div>
+
+          <p>
+            Esta versao transforma o projeto em uma urna exclusiva para o segmento Pais,
+            sem mistura com outros segmentos.
+          </p>
+
+          <h4>Urna publica</h4>
+          <ul>
+            <li>Tela inicial identificada como Urna Escolar - Pais.</li>
+            <li>Cards de candidatos com foto e nome.</li>
+            <li>Votacao sem campo de identificacao do eleitor.</li>
+            <li>Confirmacao antes do registro do voto.</li>
+            <li>Tela FIM com reinicio automatico para o proximo eleitor.</li>
+          </ul>
+
+          <h4>Backend</h4>
+          <ul>
+            <li>Remocao dos scripts do backend anterior nos arquivos ativos da urna.</li>
+            <li>Configuracao centralizada em `api-config.js`.</li>
+            <li>Envio do voto para `POST /api/votos-pais`.</li>
+            <li>Leitura dos candidatos em `GET /api/candidatos-pais`.</li>
+            <li>Relatorio em `GET /api/relatorio-pais`.</li>
+          </ul>
+
+          <h4>Cloudflare</h4>
+          <ul>
+            <li>Worker atualizado para `urna-pais-api`.</li>
+            <li>Banco D1 sugerido como `urna-pais-d1`.</li>
+            <li>Tabelas `candidatos_pais` e `votos_pais`.</li>
+            <li>SQL de criacao atualizado em `cloudflare/schema.sql`.</li>
+            <li>Instrucoes de deploy atualizadas em `cloudflare/README.md`.</li>
+          </ul>
+
+          <h4>Painel administrativo</h4>
+          <ul>
+            <li>Relatorio exclusivo do segmento Pais.</li>
+            <li>Login via API Cloudflare.</li>
+            <li>Total geral de votos.</li>
+            <li>Votos e porcentagem por candidato.</li>
+            <li>Botoes para atualizar e imprimir o relatorio.</li>
+          </ul>
+
+          <div class="highlight-box">
+            Resumo: esta versao usa Cloudflare Workers/Pages Functions + D1 nos arquivos ativos.
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <p class="footer">Urna Eletronica Escolar - Notas de Atualizacao - Segmento Pais</p>
+  </main>
+</body>
+</html>
