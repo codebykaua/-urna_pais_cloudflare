@@ -266,6 +266,15 @@ input {
   margin-top: 4px;
 }
 
+.lista-header h2 {
+  font-size: 1.35rem;
+}
+
+.lista-header p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .form-group {
   margin-bottom: 18px;
 }
@@ -320,31 +329,33 @@ input {
 }
 
 .status-message {
-  padding: 13px 14px;
-  border-radius: var(--radius-sm);
-  background: #e0f2fe;
-  color: #075985;
-  border: 1px solid #bae6fd;
-  font-size: 0.88rem;
-  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  justify-self: end;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--blue);
+  color: transparent;
+  border: 2px solid var(--blue-dark);
+  font-size: 0;
+  line-height: 0;
 }
 
 .status-message.success {
-  background: rgba(0, 168, 89, 0.1);
-  border-color: rgba(0, 168, 89, 0.25);
-  color: var(--green-dark);
+  background: var(--green);
+  border-color: var(--green-dark);
 }
 
 .status-message.error {
-  background: rgba(237, 28, 36, 0.1);
-  border-color: rgba(237, 28, 36, 0.25);
-  color: var(--red-dark);
+  background: var(--red);
+  border-color: var(--red-dark);
 }
 
 .status-message.info {
-  background: #fff7ed;
-  border-color: #fed7aa;
-  color: #9a3412;
+  background: var(--yellow);
+  border-color: #c2410c;
 }
 
 .candidatos-panel {
